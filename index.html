@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Twilight Perfumes</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header id="nav" class="hidden">
+  <div class="logo">Twilight</div>
+  <nav>
+    <a data-page="home">Home</a>
+    <a data-page="products">Products</a>
+    <a data-page="wishlist">Wishlist <span id="wCount">0</span></a>
+    <a data-page="cart">Cart <span id="cCount">0</span></a>
+  </nav>
+</header>
+
+<main>
+  <!-- Registration (first page) -->
+  <section id="register" class="page active center">
+    <div class="card reg">
+      <h1 class="brand">Twilight</h1>
+      <p class="tag">Perfumes born at dusk</p>
+      <form id="regForm">
+        <input type="text" id="rName" placeholder="Full name" required>
+        <input type="email" id="rEmail" placeholder="Email" required>
+        <input type="password" id="rPass" placeholder="Password (min 6 characters)" minlength="6" required>
+        <button type="submit" class="btn">Register</button>
+        <p id="rMsg" class="msg"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- Home -->
+  <section id="home" class="page center">
+    <h1 class="brand big">Twilight</h1>
+    <p class="tag">Where the day meets the night, a fragrance is born.</p>
+    <div class="bottle-row">
+      <div class="bottle" style="--liquid:#ff9a3c"><i class="cap"></i><i class="neck"></i><div class="body"><b></b></div></div>
+      <div class="bottle tall" style="--liquid:#e0457b"><i class="cap"></i><i class="neck"></i><div class="body"><b></b></div></div>
+      <div class="bottle" style="--liquid:#8a4fff"><i class="cap"></i><i class="neck"></i><div class="body"><b></b></div></div>
+    </div>
+    <button class="btn" data-page="products">Shop Perfumes</button>
+  </section>
+
+  <!-- Products -->
+  <section id="products" class="page">
+    <h2 class="title">Our Collection</h2>
+    <div id="grid" class="grid"></div>
+  </section>
+
+  <!-- Wishlist -->
+  <section id="wishlist" class="page">
+    <h2 class="title">Your Wishlist</h2>
+    <div id="wList" class="list"></div>
+  </section>
+
+  <!-- Cart -->
+  <section id="cart" class="page">
+    <h2 class="title">Your Cart</h2>
+    <div id="cList" class="list"></div>
+    <h3 id="total" class="total"></h3>
+  </section>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
